@@ -53,8 +53,18 @@ public class CellPhone {
         this.Owner = null;
     }
 
+    public CellPhone(String PhoneNumber, String Model, String Carrier, String Owner) {
+        this.PhoneNumber = PhoneNumber;
+        this.Model = Model;
+        this.Carrier = Carrier;
+        this.Owner = Owner;
+    }
+
     public void dial(String PhoneNumber) {
         System.out.printf(getOwner() + "'s phone is calling " + PhoneNumber + "\n");
+    }
+    public void dial(CellPhone phone) {
+        System.out.printf(getOwner() + "'s phone is calling " + phone.PhoneNumber + "\n");
 
     }
 }

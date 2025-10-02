@@ -50,10 +50,18 @@ public class Main {
         phone2.setOwner("rando");
         phone2.dial("2323131231231");
 
+        CellPhone phone3 = new CellPhone("909-525-2323", "iphone 12", "Verizon", "Hank Hill");
+
         display(phone1);
         display(phone2);
+        display(phone3);
+
         phone1.dial(phone2.getPhoneNumber());
         phone2.dial(phone1.getPhoneNumber());
+        System.out.println();
+        phone2.dial(phone1);
+        phone1.dial(phone2);
+        phone3.dial(phone1);
 
     }
 
